@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6dfe2a51f6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="header">
+        <img id="logo" src="images/logo3.png">
+        <ul id="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/j1-high5.jpg" alt="Picture of a pair of Air Jordan 1s brown and black in colour">
+                </div>
+                <div class="about-col-2">
+                    <h4>Product/Air Jordans</h4>
+                    <h1 class="sub-title">Air Jordan 1 Retro High OG</h1>
+                    <h2>$170</h2><br>
+                    
+                    <select name="size" id="sizeID">
+                        <option>Select Size</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                    </select>
+                    <input type="number" value="1" style="width: 2em;">
+                    <a href="" class="btn">Add to Cart</a>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('details')">Details</p>
+                        <p class="tab-links" onclick="opentab('review')">Reviews</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="details">
+                        <p style="font-size: 20px;">Familiar but always fresh, the iconic Air Jordan 1 is remastered for today's<br>
+                            sneakerhead culture. This Retro High OG version goes all in with premium 
+                            leather,<br> comfortable cushioning and classic design details.</p>
+                    </div>
+                    <div class="tab-contents" id="review">
+                        <ul>
+                            <li><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span>
+                            <br>Dropped 50 with these kicks!</li><br>
+                            <li><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span>
+                            <br>MJ the Goat frfr!</li>                       
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="copyright">
+            <p>&copy; 2023 by Mason Mathura</p>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+</body>
+</html>
